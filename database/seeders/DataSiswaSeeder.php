@@ -33,8 +33,9 @@ class DataSiswaSeeder extends Seeder
                  'no_telp' => $faker->phoneNumber,
                  'email' => $faker->email,
                  'password' => bcrypt('secret'),
-                 'wali_kelas' => $faker->randomElement([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
+                 'id_walikelas' => $faker->randomElement([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
                  'jurusan' => $faker->randomElement(['rpl', 'mm', 'tkj']),
+                 'created_at' => date('Y-m-d H:i:s')
              ]);
             }
     }

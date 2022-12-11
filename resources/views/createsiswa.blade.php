@@ -42,46 +42,104 @@
                   </div>
                   <div class="x_content">
                     <br />
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="{{ route('admin.siswa.createsave') }}" method="POST">
+                        @csrf
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">NISN <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="first-name" required="required" name="nisn" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last Name <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nama Lengkap <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="first-name" required="required" name="nama" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Middle Name / Initial</label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Alamat <span class="required">*</span>
+                        </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+                          <input type="text" id="first-name" required="required" name="alamat" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Gender</label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">No. Telp <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="first-name" required="required" name="no_telp" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Email <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="email" id="first-name" required="required" name="email" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Password <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="password" id="first-name" required="required" name="password" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Kelas</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <div id="gender" class="btn-group" data-toggle="buttons">
                             <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                              <input type="radio" name="gender" value="male"> &nbsp; Male &nbsp;
+                              <input type="radio" name="kelas" value="10"> &nbsp; 10 &nbsp;
                             </label>
-                            <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                              <input type="radio" name="gender" value="female"> Female
+                            <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <input type="radio" name="kelas" value="11"> 11
+                            </label>
+                            <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <input type="radio" name="kelas" value="12"> 12
                             </label>
                           </div>
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth <span class="required">*</span>
-                        </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Jurusan</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                          <div id="gender" class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <input type="radio" name="jurusan" value="mm"> &nbsp; MM &nbsp;
+                            </label>
+                            <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <input type="radio" name="jurusan" value="tkj"> TKJ
+                            </label>
+                            <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <input type="radio" name="jurusan" value="rpl"> RPL
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Jenis Kelamin</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div id="gender" class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <input type="radio" name="jenis_kelamin" value="pria"> &nbsp; Pria &nbsp;
+                            </label>
+                            <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <input type="radio" name="jenis_kelamin" value="wanita"> Wanita
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Wali Kelas</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select class="form-control" name="id_guru">
+                            <option hidden>-- Pilih Wali Kelas Murid --</option>
+                            @foreach ($guru as $gr)
+                            <option value="{{ $gr->id }}">{{ $gr->nama }}</option>
+                            @endforeach
+                          </select>
                         </div>
                       </div>
                       <div class="ln_solid"></div>

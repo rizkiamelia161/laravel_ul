@@ -25,7 +25,9 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Data Siswa</h2>
+                    <h2>Data Siswa 
+                      <a href="{{ route('admin.siswa.createview') }}" class="btn btn-sm btn-primary">+ Tambah Siswa</a>
+                    </h2>
                     <ul class="nav navbar-right panel_toolbox">
                     </ul>
                     <div class="clearfix"></div>
@@ -53,7 +55,6 @@
                           <th>alamat</th>
                           <th>No.Telp</th>
                           <th>Email</th>
-                          <th>Password</th>
                           <th>Wali Kelas</th>
                           <th>Action</th>
                         </tr>
@@ -61,19 +62,30 @@
 
 
                       <tbody>
+                        @foreach ($siswa as $sw)
                         <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
+                          <td>{{ $sw->id }}</td>
+                          <td>{{ $sw->nama }}</td>
+                          <td>{{ $sw->kelas }}</td>
+                          <td>{{ $sw->jurusan }}</td>
+                          <td>{{ $sw->nisn }}</td>
+                          <td>{{ $sw->jenis_kelamin }}</td>
+                          <td>{{ $sw->alamat }}</td>
+                          <td>{{ $sw->no_telp }}</td>
+                          <td>{{ $sw->email }}</td>
+                          <td>
+                            {{ @$sw->dataguru->nama }}
+                          </td>
+                          <td>
+                            {{-- <button class="btn btn-sm btn-info">Ubah</button> --}}
+                            <form action="{{ route('admin.siswa.hapussiswa', $sw->id) }}" method="post">
+                              @method('delete')
+                              @csrf
+                            <button class="btn btn-sm btn-danger" type="submit">Hapus</button>
+                            </form>
+                          </td>
                         </tr>
+                        @endforeach
                       </tbody>
                     </table>
                   </div>

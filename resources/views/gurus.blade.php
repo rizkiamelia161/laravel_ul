@@ -25,7 +25,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Data Siswa</h2>
+                    <h2>Data Guru</h2>
                     <ul class="nav navbar-right panel_toolbox">
                     </ul>
                     <div class="clearfix"></div>
@@ -46,34 +46,32 @@
                         <tr>
                           <th>Id</th>
                           <th>Nama</th>
-                          <th>Kelas</th>
-                          <th>Jurusan</th>
-                          <th>NISN</th>
-                          <th>Jenis_kelamin</th>
-                          <th>alamat</th>
-                          <th>No.Telp</th>
+                          <th>Alamat</th>
+                          <th>Mapel</th>
+                          <th>Jenis Kelamin</th>
+                          <th>No Telp</th>
                           <th>Email</th>
-                          <th>Password</th>
-                          <th>Wali Kelas</th>
                           <th>Action</th>
                         </tr>
                       </thead>
 
 
                       <tbody>
+                        @foreach ($guru as $gr)
                         <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
+                          <td>{{ $gr->id }}</td>
+                          <td>{{ $gr->nama }}</td>
+                          <td>{{ $gr->alamat }}</td>
+                          <td>{{ $gr->mapel }}</td>
+                          <td>{{ $gr->jenis_kelamin }}</td>
+                          <td>{{ $gr->no_telp }}</td>
+                          <td>{{ $gr->email }}</td>
+                          <td>
+                            {{-- <button class="btn btn-sm btn-info">Ubah</button> --}}
+                            <button class="btn btn-sm btn-danger">Hapus</button>
+                          </td>
                         </tr>
+                        @endforeach
                       </tbody>
                     </table>
                   </div>

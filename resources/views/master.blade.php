@@ -63,12 +63,12 @@
                   </li>
 
                   </li>
-                  <li><a><i class="fa fa-desktop"></i> Guru</span></a>
+                  <li><a href="{{ route('admin.guru.view') }}"><i class="fa fa-desktop"></i> Guru</span></a>
                    
                   </li>
 
                   </li>
-                  <li><a href="siswas"><i class="fa fa-desktop"></i> Siswa</span></a>
+                  <li><a href="{{ route('admin.siswa.view') }}"><i class="fa fa-desktop"></i> Siswa</span></a>
                    
                   </li>
                 </ul>

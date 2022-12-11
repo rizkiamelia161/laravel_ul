@@ -13,21 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('siswa', function (Blueprint $table) {
+        Schema::create('guru', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('kelas');
-            $table->string('jurusan');
-            $table->string('nisn');
-            $table->string('jenis_kelamin');
             $table->string('alamat');
+            $table->string('mapel');
+            $table->string('jenis_kelamin');
             $table->string('no_telp');
             $table->string('email');
             $table->string('password');
-            $table->integer('id_guru')->unsigned()->nullable()->default(null);
             $table->timestamps();
 
-            $table->index(['id', 'nama', 'id_walikelas']);
+            $table->index(['id', 'nama']);
         });
     }
 
@@ -38,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('siswa');
+        Schema::dropIfExists('guru');
     }
 };

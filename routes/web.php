@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,11 +27,9 @@ Route::get('dashboard', function () {
     return view('dashboard');
 });
 
-Route::get('siswas', function () {
-    return view('siswas');
-});
-Route::get('createsiswa', function () {
-    return view('createsiswa');
-});
+Route::get('/siswas', [SiswasController::class, 'index'])->name('admin.siswa.view');
+Route::get('/siswas/create', [SiswasController::class, 'createview'])->name('admin.siswa.createview');
+Route::post('/siswas/create', [SiswasController::class, 'createsave'])->name('admin.siswa.createsave');
+Route::delete('/siswas/hapus/{id}', [SiswasController::class, 'hapussiswa'])->name('admin.siswa.hapussiswa');
 
-// Route::get('/dashboard', [DashboardController::class, 'dashboard']);
+Route::get('/gurus', [GurusController::class, 'index'])->name('admin.guru.view');

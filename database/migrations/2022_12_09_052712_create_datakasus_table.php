@@ -15,9 +15,15 @@ return new class extends Migration
     {
         Schema::create('datakasus', function (Blueprint $table) {
             $table->id();
+            $table->integer('id_siswa')->unsigned()->nullable()->default(null);
+            $table->integer('id_guru')->unsigned()->nullable()->default(null);
+            $table->integer('id_kasus')->unsigned()->nullable()->default(null);
             $table->string('pelanggaran');
             $table->string('tindak_lanjut');
             $table->string('jumlah_point');
+            $table->timestamps();
+
+            $table->index(['id', 'id_siswa', 'id_guru', 'id_kasus']);
         });
     }
 
