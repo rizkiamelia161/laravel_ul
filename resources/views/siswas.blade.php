@@ -1,10 +1,7 @@
 @extends('master')
-
+@section('nav-md')
 @section('konten')
-
-<!-- <div class="right_col" role="main">
-        <div class="right_col" role="main"> -->
-          <div class="">
+      <div class="">
             <div class="page-title">
               <div class="title_left">
                 <h3>Users</h3>
@@ -28,7 +25,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Data Kasus</h2>
+                    <h2>Data Siswa</h2>
                     <ul class="nav navbar-right panel_toolbox">
                     </ul>
                     <div class="clearfix"></div>
@@ -48,19 +45,34 @@
                       <thead>
                         <tr>
                           <th>Id</th>
-                          <th>Pelanggaran</th>
-                          <th>Tindak Lanjut</th>
-                          <th>Jumlah Point</th>
+                          <th>Nama</th>
+                          <th>Kelas</th>
+                          <th>Jurusan</th>
+                          <th>NISN</th>
+                          <th>Jenis_kelamin</th>
+                          <th>alamat</th>
+                          <th>No.Telp</th>
+                          <th>Email</th>
+                          <th>Password</th>
+                          <th>Wali Kelas</th>
+                          <th>Action</th>
                         </tr>
                       </thead>
 
 
                       <tbody>
                         <tr>
-                          <td>Tiger Nixon</td>
-                          <td>System Architect</td>
-                          <td>Edinburgh</td>
-                          <td>61</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
                         </tr>
                       </tbody>
                     </table>
@@ -69,9 +81,4 @@
               </div>
             </div>
           </div>
-        <!-- </div>
-        </div> -->
-
-        
-    
 @endsection

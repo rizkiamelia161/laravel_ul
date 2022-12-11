@@ -14,11 +14,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('master');
+});
+
+Route::get('datakasus', function () {
+    return view('datakasus');
+});
+
+Route::get('dashboard', function () {
     return view('dashboard');
 });
 
-Route::get('/datakasus', function () {
-    return view('dashboard');
+Route::get('siswas', function () {
+    return view('siswas');
+});
+Route::get('createsiswa', function () {
+    return view('createsiswa');
 });
 
 // Route::get('/dashboard', [DashboardController::class, 'dashboard']);
